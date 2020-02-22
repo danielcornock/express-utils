@@ -1,0 +1,19 @@
+{
+  "name": "@danielc7150/express-utils",
+  "version": "1.0.0",
+  "description": "A package of utilities that can be shared across multiple express projects.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "typescript": "^3.8.2"
+  },
+  "dependencies": {
+    "@types/node": "^13.7.4",
+    "express": "^4.17.1"
+  }
+}
