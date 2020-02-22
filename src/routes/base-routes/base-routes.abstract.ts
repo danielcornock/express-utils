@@ -3,8 +3,8 @@ import { Router } from 'express';
 export abstract class BaseRoutes {
   protected router: Router;
 
-  constructor() {
-    this.router = Router({ mergeParams: true });
+  constructor(router: Router) {
+    this.router = router;
   }
 
   public get routes(): Router {
