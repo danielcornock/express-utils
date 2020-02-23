@@ -1,6 +1,6 @@
 {
   "name": "@danielc7150/express-utils",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A package of utilities that can be shared across multiple express projects.",
   "types": "lib/index.d.ts",
   "scripts": {
