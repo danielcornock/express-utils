@@ -1,1 +1,1 @@
-export { BaseRoutes } from './base-routes/base-routes.abstract';
+export * from './base-routes.abstract';

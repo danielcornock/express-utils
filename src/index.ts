@@ -1,3 +1,4 @@
-export * from './interfaces';
+export * from './http';
 export * from './testing';
 export * from './routes';
+export * from './controllers';
