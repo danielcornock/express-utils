@@ -9,4 +9,11 @@ export class ResponseFactory {
     const modelInstance: ModelInstance<T> = ModelInstance.create({ data: config.data, name: config.name, selfLink: config.selfLinkOverride });
     res.json(modelInstance);
   }
+
+  static successFind<T extends IDBEntry>(res: IRes, config: ISuccessCreateResponseConfig<T>): void {
+    res.status(200);
+    const modelInstance: ModelInstance<T> = ModelInstance.create({ data: config.data, name: config.name, selfLink: config.selfLinkOverride });
+
+    res.json(modelInstance);
+  }
 }
