@@ -1,21 +1,22 @@
-import { IDocumentNames } from '../controllers/interfaces/document-names.interface';
 import { IModelData, IModelMeta } from './interfaces/model-response.interface';
 import { LinkBuilder } from '../controllers/link-builder';
 import { IDBEntry } from '../database/interfaces/db-entry.interface';
+import { IModelInstanceConfig } from './interfaces/model-instance-config.interface';
 
 export class ModelInstance<T extends IDBEntry> {
   public data: IModelData<T> = {};
   public meta: IModelMeta;
 
-  static create<D extends IDBEntry>(dataObject: D, names: IDocumentNames, selfLinkOverride?: string) {
-    return new ModelInstance<D>(dataObject, names, selfLinkOverride);
+  static create<D extends IDBEntry>(config: IModelInstanceConfig<D>) {
+    return new ModelInstance<D>(config);
   }
 
-  constructor(dataObject: T, names: IDocumentNames, selfLinkOverride: string | undefined) {
-    this.data[names.singular] = dataObject;
+  constructor(config: IModelInstanceConfig<T>) {
+    const dataObj: T = config.data[Object.keys(config.data)[0]];
+    this.data[config.name] = dataObj;
     this.meta = {
       links: {
-        self: selfLinkOverride ? selfLinkOverride : LinkBuilder.self(names.plural, dataObject.id)
+        self: config.selfLink ? config.selfLink : LinkBuilder.self(config.name, dataObj.id)
       }
     };
   }
