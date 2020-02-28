@@ -1,7 +1,7 @@
-import { IModelData, IModelMeta } from './interfaces/model-response.interface';
-import { LinkBuilder } from '../controllers/link-builder';
-import { IDBEntry } from '../database/interfaces/db-entry.interface';
-import { IModelInstanceConfig } from './interfaces/model-instance-config.interface';
+import { IModelData, IModelMeta } from './interfaces';
+import { LinkBuilder } from '../controllers';
+import { IDBEntry } from '../database/interfaces';
+import { IModelInstanceConfig } from './interfaces';
 
 export class ModelInstance<T extends IDBEntry> {
   public data: IModelData<T> = {};
