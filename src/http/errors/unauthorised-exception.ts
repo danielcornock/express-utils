@@ -2,6 +2,7 @@ import { HttpException } from './http-exception';
 
 export class UnauthorisedException extends HttpException {
   constructor(message: string) {
-    super(message, 401, 'Unauthorised');
+    const userMessage = message ? message : 'You are not authorised to access this resource.';
+    super(userMessage, 401, 'Unauthorised');
   }
 }
