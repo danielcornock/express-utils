@@ -6,6 +6,6 @@ export class HttpException extends Error {
     super();
     this.message = message;
     this.statusCode = statusCode;
-    this.error = error ? `${statusCode} ${error}` : `${statusCode} Error;
+    this.error = error ? `${statusCode} ${error}` : `${statusCode} Error`;
   }
 }
