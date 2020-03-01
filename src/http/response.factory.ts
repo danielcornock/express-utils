@@ -18,6 +18,10 @@ export class ResponseFactory {
     res.json(modelInstance);
   }
 
+  static successDelete(res: IRes): void {
+    res.status(200).send();
+  }
+
   static error<TError extends HttpException>(res: IRes, error: TError) {
     res.status(error.statusCode).json(error);
   }
