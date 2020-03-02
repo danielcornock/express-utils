@@ -6,4 +6,5 @@ export class ResStub {
 export class ReqStub {
   body: any = {};
   user: any = {};
+  params: any = {};
 }
