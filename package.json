@@ -2,6 +2,7 @@
   "name": "@danielc7150/express-utils",
   "version": "3.8.1",
   "description": "A package of utilities that can be shared across multiple express projects.",
+  "main": "./lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "rm -rf lib/ && tsc",
@@ -12,7 +13,7 @@
     "url": "git+https://github.com/danielcornock/express-utils.git"
   },
   "author": "Daniel Cornock",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/express": "^4.17.2",
     "@types/jest": "^25.1.3",
