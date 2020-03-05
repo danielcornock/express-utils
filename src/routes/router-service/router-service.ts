@@ -27,6 +27,10 @@ export class RouterService {
     this.router.use(...args);
   }
 
+  public authenticate(route: string, authCallback: any) {
+    this.router.route(route).post(authCallback);
+  }
+
   private _tryCatch(fn: Function) {
     return (...args: any) => {
       fn(...args).catch(args[2]);
