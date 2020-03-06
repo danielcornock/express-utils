@@ -32,7 +32,7 @@ export class RouterService {
   }
 
   private _tryCatch(fn: Function) {
-    return (...args: any) => {
+    return async (...args: any) => {
       fn(...args).catch(args[2]);
     };
   }
