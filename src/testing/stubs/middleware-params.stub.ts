@@ -8,4 +8,5 @@ export class ReqStub {
   body: any = {};
   user: any = {};
   params: any = {};
+  headers: any = {};
 }

@@ -23,6 +23,10 @@ export class RouterService {
     this.router.delete(params, this._tryCatch(fn));
   }
 
+  public middleware(fn: Function) {
+    this.router.use(this._tryCatch(fn));
+  }
+
   public use(...args: any) {
     this.router.use(...args);
   }
