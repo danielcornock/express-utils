@@ -24,7 +24,7 @@
   "dependencies": {
     "@types/node": "^13.7.4",
     "express": "^4.17.1",
-    "knex": "^0.20.10"
+    "knex": "^2.4.0"
   },
   "files": [
     "lib/**/*"
